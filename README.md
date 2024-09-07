@@ -1,8 +1,6 @@
 ## DelGo
 Training a computer (and myself) to play Go!
 
-Based off the book *Deep Learning and the Game of Go* by Max Pumperla and Kevin Ferguson
-
 *Note: This project is a WIP— cleaning up the code piece by piece and adding it to GitHub*
 
 
@@ -16,3 +14,5 @@ Based off the book *Deep Learning and the Game of Go* by Max Pumperla and Kevin 
 - Implementation of Neural Networks
 - Deep Learning using game records
 - Reinforcement Learning & Self-Play
+
+Based off the book *Deep Learning and the Game of Go* by Max Pumperla and Kevin Ferguson
