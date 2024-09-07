@@ -3,14 +3,16 @@ Training a computer (and myself) to play Go!
 
 *Note: This project is a WIP— cleaning up the code piece by piece and adding it to GitHub*
 
+### New this Version:
+- Using Monte-Carlo Tree Search for selecting *better than random* moves
+- Can customize board size and player order!
 
-### Outline:
+### Currently Implemented:
 - Outlining the rules, board, and game logic
 - Zobrist Hashing to speed up gameplay
 - Creating a bot that can play against itself and other humans
 
 ### Coming Soon:
-- Using Monte-Carlo Tree Search for selecting *better than random* moves
 - Implementation of Neural Networks
 - Deep Learning using game records
 - Reinforcement Learning & Self-Play
