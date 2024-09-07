@@ -11,7 +11,8 @@ class Player(enum.Enum):
         return Player.black if self == Player.white else Player.white
     
 class Point(namedtuple('Point', 'row col')):
-    # A namedtuple lets us access the coordiate as point.row, point.col for better readability
+    # A namedtuple lets us access the coordinate as point.row, point.col 
+    # for better readability
     def neighbours(self):
         return [
             Point(self.row - 1, self.col),

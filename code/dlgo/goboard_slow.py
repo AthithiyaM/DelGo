@@ -1,3 +1,5 @@
+# This file is a version of goboard.py that does not use Zobrist hashing to store gamestates
+
 import copy
 from dlgo.gotypes import Point, Player
 
@@ -26,6 +28,7 @@ class Move():
 
 class GoString():
     # Class to represent a string of stones using a set
+    
     def __init__(self, color, stones: list[Point], liberties):
         self.color=color
         self.stones = set(stones)
@@ -93,19 +96,22 @@ class Board():
             if neighbour_string is None:
                 liberties.append(neighbour)
             elif neighbour_string.color == player:
-                if neighbour_string not in adjacent_same_color: adjacent_same_color.append(neighbour_string)
-                else:
-                    if neighbour_string not in adjacent_opposite_color: adjacent_opposite_color.append(neighbour_string)
+                if neighbour_string not in adjacent_same_color: 
+                    adjacent_same_color.append(neighbour_string)
+            else:
+                if neighbour_string not in adjacent_opposite_color: adjacent_opposite_color.append(neighbour_string)
             
         new_string = GoString(player, [point], liberties)
 
+        # Merge any adjacent strings of the same color
         for same_color_string in adjacent_same_color:
             new_string = new_string.merged_with(same_color_string)
-            for new_string_point in new_string.stones:
-                self._grid[new_string_point] = new_string
-        
+        for new_string_point in new_string.stones:
+            self._grid[new_string_point] = new_string
+        # Reduce liberties of any adjacent strings of the opposite color
         for other_color_string in adjacent_opposite_color:
             other_color_string.remove_liberty(point)
+        # If any opposite-color strings now have 0 liberties, remove them
         for other_color_string in adjacent_opposite_color:
             if other_color_string.num_liberties == 0:
                 self._remove_string(other_color_string)
@@ -137,8 +143,10 @@ class Board():
         for point in string.stones:
             for neighbour in point.neighbours():
                 neighbour_string = self._grid.get(neighbour)
-                if neighbour_string is None: continue
-                if neighbour_string is not string: neighbour_string.add_liberty(point)
+                if neighbour_string is None: 
+                    continue
+                if neighbour_string is not string: 
+                    neighbour_string.add_liberty(point)
             self._grid[point] = None
 
 
