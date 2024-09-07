@@ -15,6 +15,7 @@ def print_move(player, move: goboard_slow.Move):
     else:
         move_str = '%s%d' % (COLS[move.point.col - 1], move.point.row)
     print('%s %s' % (player, move_str))
+    return move_str
 
 def print_board(board):
     for row in range(board.num_rows, 0, -1):
@@ -31,4 +32,10 @@ def point_from_coords(coords):
     col = COLS.index(coords[0]) + 1
     row = int(coords[1:])
     return gotypes.Point(row=row, col=col)
+
+def coords_from_point(point):
+    return '%s%d' % (
+        COLS[point.col - 1],
+        point.row
+    )
             
