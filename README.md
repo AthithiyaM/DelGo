@@ -10,7 +10,7 @@ Training a computer (and myself) to play Go!
 - Creating a bot that can play against itself and other humans
 
 ### Coming Soon:
-- Using tree search for selecting moves
+- Using Monte-Carlo Tree Search for selecting *better than random* moves
 - Implementation of Neural Networks
 - Deep Learning using game records
 - Reinforcement Learning & Self-Play
