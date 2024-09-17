@@ -12,9 +12,10 @@ Training a computer (and myself) to play Go!
 - Zobrist Hashing to speed up gameplay
 - Creating a bot that can play against itself and other humans
 - Simple sequential network used for move prediction (not the best, but better than random)
+- Implemented Convolutional Neural Networks + New Activation Functions (Softmax & Rectified Linear Units)!
+- Added dropout layers to prevent overfitting, and using Categorial Cross-Entropy instead of MSE for accuracy measuring
 
 ### Coming Soon:
-- Implementation of Convolutional Neural Networks + New Activation Functions!
 - Deep Learning using game records
 - Reinforcement Learning & Self-Play
 
