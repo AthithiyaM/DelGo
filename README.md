@@ -15,8 +15,8 @@ Training a computer (and myself) to play Go!
 - Implemented Convolutional Neural Networks + New Activation Functions (Softmax & Rectified Linear Units)!
 - Added dropout layers to prevent overfitting, and using Categorial Cross-Entropy instead of MSE for accuracy measuring
 
-### Coming Soon:
-- Deep Learning using game records
-- Reinforcement Learning & Self-Play
+### Currently Working On:
+- Deep Learning using game records from high level players
+- A Better GUI
 
 Based off the book *Deep Learning and the Game of Go* by Max Pumperla and Kevin Ferguson
